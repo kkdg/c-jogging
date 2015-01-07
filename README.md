@@ -1,4 +1,4 @@
 c-jogging
 =========
 
-Daily commit
+Daily commit for C
