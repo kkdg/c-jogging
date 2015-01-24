@@ -32,7 +32,7 @@ int main()
 
 	if ( conductor == 0 )
 	{
-		printf( "Out of memory" );
+		puts( "Out of memory" );
 		return 0;
 	}
 
