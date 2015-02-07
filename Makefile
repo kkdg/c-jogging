@@ -1,3 +1,6 @@
-link.out: 0121/link.c
-	gcc 0121/link.c -o link.out
+CC = gcc
+Target = link.out
+OBJS = 0207/link.c
 
+$(Target): $(OBJS)
+	$(CC) $^ -o $@
