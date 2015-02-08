@@ -1,4 +1,4 @@
-extern double sin (double);
+#include <math.h>
 
 int main() 
 {
