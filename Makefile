@@ -94,7 +94,7 @@ CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am__dirstamp = $(am__leading_dot)dirstamp
-am_hi_OBJECTS = 0208/conf.$(OBJEXT) 0208/link.$(OBJEXT)
+am_hi_OBJECTS = 0209/malloc.$(OBJEXT)
 hi_OBJECTS = $(am_hi_OBJECTS)
 hi_LDADD = $(LDADD)
 AM_V_P = $(am__v_P_$(V))
@@ -254,7 +254,7 @@ target_alias =
 top_build_prefix = 
 top_builddir = .
 top_srcdir = .
-hi_SOURCES = 0208/conf.c 0208/link.c
+hi_SOURCES = 0209/malloc.c
 all: all-am
 
 .SUFFIXES:
@@ -335,16 +335,14 @@ uninstall-binPROGRAMS:
 
 clean-binPROGRAMS:
 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
-0208/$(am__dirstamp):
-	@$(MKDIR_P) 0208
-	@: > 0208/$(am__dirstamp)
-0208/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) 0208/$(DEPDIR)
-	@: > 0208/$(DEPDIR)/$(am__dirstamp)
-0208/conf.$(OBJEXT): 0208/$(am__dirstamp) \
-	0208/$(DEPDIR)/$(am__dirstamp)
-0208/link.$(OBJEXT): 0208/$(am__dirstamp) \
-	0208/$(DEPDIR)/$(am__dirstamp)
+0209/$(am__dirstamp):
+	@$(MKDIR_P) 0209
+	@: > 0209/$(am__dirstamp)
+0209/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) 0209/$(DEPDIR)
+	@: > 0209/$(DEPDIR)/$(am__dirstamp)
+0209/malloc.$(OBJEXT): 0209/$(am__dirstamp) \
+	0209/$(DEPDIR)/$(am__dirstamp)
 
 hi$(EXEEXT): $(hi_OBJECTS) $(hi_DEPENDENCIES) $(EXTRA_hi_DEPENDENCIES) 
 	@rm -f hi$(EXEEXT)
@@ -352,13 +350,12 @@ hi$(EXEEXT): $(hi_OBJECTS) $(hi_DEPENDENCIES) $(EXTRA_hi_DEPENDENCIES)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
-	-rm -f 0208/*.$(OBJEXT)
+	-rm -f 0209/*.$(OBJEXT)
 
 distclean-compile:
 	-rm -f *.tab.c
 
-include 0208/$(DEPDIR)/conf.Po
-include 0208/$(DEPDIR)/link.Po
+include 0209/$(DEPDIR)/malloc.Po
 
 .c.o:
 	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
@@ -631,8 +628,8 @@ clean-generic:
 distclean-generic:
 	-test -z "$(CONFIG_CLEAN_FILES)" || rm -f $(CONFIG_CLEAN_FILES)
 	-test . = "$(srcdir)" || test -z "$(CONFIG_CLEAN_VPATH_FILES)" || rm -f $(CONFIG_CLEAN_VPATH_FILES)
-	-rm -f 0208/$(DEPDIR)/$(am__dirstamp)
-	-rm -f 0208/$(am__dirstamp)
+	-rm -f 0209/$(DEPDIR)/$(am__dirstamp)
+	-rm -f 0209/$(am__dirstamp)
 
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
@@ -643,7 +640,7 @@ clean-am: clean-binPROGRAMS clean-generic mostlyclean-am
 
 distclean: distclean-am
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
-	-rm -rf 0208/$(DEPDIR)
+	-rm -rf 0209/$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-tags
@@ -691,7 +688,7 @@ installcheck-am:
 maintainer-clean: maintainer-clean-am
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
 	-rm -rf $(top_srcdir)/autom4te.cache
-	-rm -rf 0208/$(DEPDIR)
+	-rm -rf 0209/$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 
