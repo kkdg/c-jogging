@@ -94,7 +94,7 @@ CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am__dirstamp = $(am__leading_dot)dirstamp
-am_hi_OBJECTS = 0209/abort.$(OBJEXT)
+am_hi_OBJECTS = 0209/malloc.$(OBJEXT)
 hi_OBJECTS = $(am_hi_OBJECTS)
 hi_LDADD = $(LDADD)
 AM_V_P = $(am__v_P_$(V))
@@ -254,7 +254,7 @@ target_alias =
 top_build_prefix = 
 top_builddir = .
 top_srcdir = .
-hi_SOURCES = 0209/abort.c
+hi_SOURCES = 0209/malloc.c
 all: all-am
 
 .SUFFIXES:
@@ -341,7 +341,7 @@ clean-binPROGRAMS:
 0209/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) 0209/$(DEPDIR)
 	@: > 0209/$(DEPDIR)/$(am__dirstamp)
-0209/abort.$(OBJEXT): 0209/$(am__dirstamp) \
+0209/malloc.$(OBJEXT): 0209/$(am__dirstamp) \
 	0209/$(DEPDIR)/$(am__dirstamp)
 
 hi$(EXEEXT): $(hi_OBJECTS) $(hi_DEPENDENCIES) $(EXTRA_hi_DEPENDENCIES) 
@@ -355,7 +355,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-include 0209/$(DEPDIR)/abort.Po
+include 0209/$(DEPDIR)/malloc.Po
 
 .c.o:
 	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
