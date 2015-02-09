@@ -1,32 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-int main() 
+int main()
 {
-	char name[100];
-	char *description;
+	int *ptr_one;
+	ptr_one = (int *)malloc(sizeof(int));
 
-	strcpy(name, "Zara Ali");
-
-	description = malloc( 30 * sizeof(char) );
-
-	if( description == NULL )
+	if(ptr_one == 0)
 	{
-		fprintf(stderr, "Error - unable to allocate required memory \n");
-	} else {
-		strcpy( description, "Zara ali a DPS student in class 10th");
+		printf("Error: Out of memory\n");
+		return 1;
 	}
 
-	description = realloc( description, 100 * sizeof(char) );
-	if( description == NULL ) 
-	{
-		fprintf(stderr, "Error - unable\n");
-	} else {
-		strcat(description, "she is in class 10th");
-	}
-	printf("Name = %s\n", name);
-	printf("Description: %s\n", description);
-	free(description);
+	*ptr_one = 25;
+	printf("%d\n", *ptr_one);
+
+	free(ptr_one);
+
+	return 0;
 }
-
