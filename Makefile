@@ -60,10 +60,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/hi
-pkgincludedir = $(includedir)/hi
-pkglibdir = $(libdir)/hi
-pkglibexecdir = $(libexecdir)/hi
+pkgdatadir = $(datadir)/i
+pkgincludedir = $(includedir)/i
+pkglibdir = $(libdir)/i
+pkglibexecdir = $(libexecdir)/i
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -76,7 +76,7 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-bin_PROGRAMS = hi$(EXEEXT)
+bin_PROGRAMS = i$(EXEEXT)
 subdir = .
 DIST_COMMON = INSTALL NEWS README AUTHORS ChangeLog \
 	$(srcdir)/Makefile.in $(srcdir)/Makefile.am \
@@ -94,9 +94,9 @@ CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am__dirstamp = $(am__leading_dot)dirstamp
-am_hi_OBJECTS = 0209/malloc2.$(OBJEXT)
-hi_OBJECTS = $(am_hi_OBJECTS)
-hi_LDADD = $(LDADD)
+am_i_OBJECTS = 0209/malloc2.$(OBJEXT)
+i_OBJECTS = $(am_i_OBJECTS)
+i_LDADD = $(LDADD)
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
 am__v_P_0 = false
@@ -125,8 +125,8 @@ AM_V_CCLD = $(am__v_CCLD_$(V))
 am__v_CCLD_ = $(am__v_CCLD_$(AM_DEFAULT_VERBOSITY))
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = $(hi_SOURCES)
-DIST_SOURCES = $(hi_SOURCES)
+SOURCES = $(i_SOURCES)
+DIST_SOURCES = $(i_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -182,7 +182,7 @@ CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
 CPPFLAGS = 
 CYGPATH_W = echo
-DEFS = -DPACKAGE_NAME=\"hi\" -DPACKAGE_TARNAME=\"hi\" -DPACKAGE_VERSION=\"0.1\" -DPACKAGE_STRING=\"hi\ 0.1\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"hi\" -DVERSION=\"0.1\"
+DEFS = -DPACKAGE_NAME=\"i\" -DPACKAGE_TARNAME=\"i\" -DPACKAGE_VERSION=\"0.1\" -DPACKAGE_STRING=\"i\ 0.1\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"i\" -DVERSION=\"0.1\"
 DEPDIR = .deps
 ECHO_C = 
 ECHO_N = -n
@@ -200,11 +200,11 @@ LTLIBOBJS =
 MAKEINFO = ${SHELL} /home/dex/Dropbox/code/c/c-jogging/missing makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
-PACKAGE = hi
+PACKAGE = i
 PACKAGE_BUGREPORT = 
-PACKAGE_NAME = hi
-PACKAGE_STRING = hi 0.1
-PACKAGE_TARNAME = hi
+PACKAGE_NAME = i
+PACKAGE_STRING = i 0.1
+PACKAGE_TARNAME = i
 PACKAGE_URL = 
 PACKAGE_VERSION = 0.1
 PATH_SEPARATOR = :
@@ -254,7 +254,7 @@ target_alias =
 top_build_prefix = 
 top_builddir = .
 top_srcdir = .
-hi_SOURCES = 0209/malloc2.c
+i_SOURCES = 0209/malloc2.c
 all: all-am
 
 .SUFFIXES:
@@ -344,9 +344,9 @@ clean-binPROGRAMS:
 0209/malloc2.$(OBJEXT): 0209/$(am__dirstamp) \
 	0209/$(DEPDIR)/$(am__dirstamp)
 
-hi$(EXEEXT): $(hi_OBJECTS) $(hi_DEPENDENCIES) $(EXTRA_hi_DEPENDENCIES) 
-	@rm -f hi$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(hi_OBJECTS) $(hi_LDADD) $(LIBS)
+i$(EXEEXT): $(i_OBJECTS) $(i_DEPENDENCIES) $(EXTRA_i_DEPENDENCIES) 
+	@rm -f i$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(i_OBJECTS) $(i_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)

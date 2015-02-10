@@ -76,7 +76,7 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-bin_PROGRAMS = hi$(EXEEXT)
+bin_PROGRAMS = i$(EXEEXT)
 subdir = .
 DIST_COMMON = INSTALL NEWS README AUTHORS ChangeLog \
 	$(srcdir)/Makefile.in $(srcdir)/Makefile.am \
@@ -94,9 +94,9 @@ CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am__dirstamp = $(am__leading_dot)dirstamp
-am_hi_OBJECTS = 0209/malloc2.$(OBJEXT)
-hi_OBJECTS = $(am_hi_OBJECTS)
-hi_LDADD = $(LDADD)
+am_i_OBJECTS = 0209/malloc2.$(OBJEXT)
+i_OBJECTS = $(am_i_OBJECTS)
+i_LDADD = $(LDADD)
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -125,8 +125,8 @@ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = $(hi_SOURCES)
-DIST_SOURCES = $(hi_SOURCES)
+SOURCES = $(i_SOURCES)
+DIST_SOURCES = $(i_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -254,7 +254,7 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-hi_SOURCES = 0209/malloc2.c
+i_SOURCES = 0209/malloc2.c
 all: all-am
 
 .SUFFIXES:
@@ -344,9 +344,9 @@ clean-binPROGRAMS:
 0209/malloc2.$(OBJEXT): 0209/$(am__dirstamp) \
 	0209/$(DEPDIR)/$(am__dirstamp)
 
-hi$(EXEEXT): $(hi_OBJECTS) $(hi_DEPENDENCIES) $(EXTRA_hi_DEPENDENCIES) 
-	@rm -f hi$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(hi_OBJECTS) $(hi_LDADD) $(LIBS)
+i$(EXEEXT): $(i_OBJECTS) $(i_DEPENDENCIES) $(EXTRA_i_DEPENDENCIES) 
+	@rm -f i$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(i_OBJECTS) $(i_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
