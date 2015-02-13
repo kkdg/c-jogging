@@ -17,6 +17,7 @@ int main()
 			printf("End of the loop.\n");
 		}
 	}
-
+	long unsigned int a = sizeof(int);
+	printf( "%lu", a);
 	return 0;
 }
