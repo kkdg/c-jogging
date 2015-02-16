@@ -14,5 +14,4 @@ int main()
 	root->next = 0;
 
 	root->x = 5;
-	putchar(root->next);
 }
