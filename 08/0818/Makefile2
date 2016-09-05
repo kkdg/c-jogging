@@ -1,0 +1,7 @@
+ab: a.c b.c
+	gcc a.o b.o -o ab
+a.o: a.c
+	gcc -c -o a.o a.c
+b.o: b.c
+	gcc -c -o b.o b.c
+
